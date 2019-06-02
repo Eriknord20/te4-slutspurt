@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="../docs/build/html/index.html">Doc</a> 
+    <h1>{{gettext("hi", name=userdata[1])}}</h1>
+    <form action="http://localhost:5000/user/{{userdata[0]}}" method="POST">
+        <label for="id">Id</label>
+        <input name="id" value={{userdata[0]}} disabled type="text">
+        <label for="name">{{gettext("name")}}</label>
+        <input name="name" value={{userdata[1]}} type="text">
+        <label for="role">{{gettext("role")}}</label>
+        <select name="role" multiple>
+            {% for id, role in allroles %}
+            {% if roledata[0] == id %}
+            <option selected value="{{roledata[0]}}">{{roledata[1]}}</option>
+            {% else %}
+            <option value="{{id}}">{{role}}</option>
+            {% endif %}
+            {% endfor %}
+        </select>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

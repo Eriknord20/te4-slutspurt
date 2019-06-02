@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to Slutspurt’s documentation! &#8212; Slutspurt 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-app">
+<span id="welcome-to-slutspurt-s-documentation"></span><h1>Welcome to Slutspurt’s documentation!<a class="headerlink" href="#module-app" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="app.addUser">
+<code class="descclassname">app.</code><code class="descname">addUser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.addUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submits user info to get inserted into to database table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>redirects you back to the /user route</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>route</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.delete">
+<code class="descclassname">app.</code><code class="descname">delete</code><span class="sig-paren">(</span><em>_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submits a form where the users gets deleted from the database table ]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_id</strong> (<em>Integer</em>) – The function uses the id of the user to find all the information and then deletes it</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>It redirects you to /user route</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.getUser">
+<code class="descclassname">app.</code><code class="descname">getUser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.getUser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all users form database</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Renders a template that has a list of all users</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.get_edit">
+<code class="descclassname">app.</code><code class="descname">get_edit</code><span class="sig-paren">(</span><em>_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.get_edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renders a form where you can update a users information</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_id</strong> (<em>Integer</em>) – The function uses the id of the user to find all the informatio</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>It returns a function that already has a users information filed in</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.index">
+<code class="descclassname">app.</code><code class="descname">index</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redirects you to /user route</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.serve_sphinx_docs">
+<code class="descclassname">app.</code><code class="descname">serve_sphinx_docs</code><span class="sig-paren">(</span><em>path='build/html/index.html'</em><span class="sig-paren">)</span><a class="headerlink" href="#app.serve_sphinx_docs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renders a page where you can find all the documentation]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em><em>, </em><em>optional</em>) – defaults to ‘index.html’</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>Documention</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.show">
+<code class="descclassname">app.</code><code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shows all users</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>returns a template with a list of all users</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="app.submit_edit">
+<code class="descclassname">app.</code><code class="descname">submit_edit</code><span class="sig-paren">(</span><em>_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.submit_edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submits a form where all changes to the user is updated in database table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_id</strong> (<em>Integer</em>) – The function uses the id of the user to find all the information</p>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>It redirects you to /user route</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.base">
+<span id="model-base-class"></span><h1>Model base class<a class="headerlink" href="#module-models.base" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="models.base.Base">
+<em class="property">class </em><code class="descclassname">models.base.</code><code class="descname">Base</code><span class="sig-paren">(</span><em>connection</em><span class="sig-paren">)</span><a class="headerlink" href="#models.base.Base" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for every model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Base class for every model</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>object</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="models.base.Base.all">
+<code class="descname">all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#models.base.Base.all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the everything from the specified table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Array of rows</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>type: Array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.base.Base.all_rel">
+<code class="descname">all_rel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#models.base.Base.all_rel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get everything across multible connected tables</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Array of rows</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.base.Base.column">
+<code class="descname">column</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#models.base.Base.column" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the columnName and adds it to a list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>type: string</em>) – The name of the column</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.base.Base.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>_id: int</em><span class="sig-paren">)</span><a class="headerlink" href="#models.base.Base.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Example:
+user = User(): instance of the user table
+user.delete(_id)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_id</strong> (<em>int</em>) – Delete where id = _id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.base.Base.find_by_id">
+<code class="descname">find_by_id</code><span class="sig-paren">(</span><em>_id: int</em><span class="sig-paren">)</span><a class="headerlink" href="#models.base.Base.find_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get row with the specified id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_id</strong> (<em>type: integer</em>) – Id for a specific row</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Array of rows</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>type: Array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.base.Base.insert">
+<code class="descname">insert</code><span class="sig-paren">(</span><em>values: []</em><span class="sig-paren">)</span><a class="headerlink" href="#models.base.Base.insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts into the sepcified table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keys</strong> (<em>list</em><em>, </em><em>optional</em><em>,</em>) – Key name</p></li>
+<li><p><strong>values</strong> (<em>list</em><em>, </em><em>optional</em>) – Value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.base.Base.table_name">
+<code class="descname">table_name</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#models.base.Base.table_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the tableName and assings it to a varible</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>type: string</em>) – nName of the table</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.base.Base.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>key</em>, <em>params</em>, <em>prev_id</em><span class="sig-paren">)</span><a class="headerlink" href="#models.base.Base.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates a row in the specified table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>Array</em>) – The array contains key and a value</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="models.base.Role">
+<em class="property">class </em><code class="descclassname">models.base.</code><code class="descname">Role</code><a class="headerlink" href="#models.base.Role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Role class contains the database tabel name and all of its columns</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>Base</strong> (<em>type: class</em>) – Inherites the base class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="models.base.User">
+<em class="property">class </em><code class="descclassname">models.base.</code><code class="descname">User</code><a class="headerlink" href="#models.base.User" title="Permalink to this definition">¶</a></dt>
+<dd><p>Role class contains the database tabel name and all of its columns</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>Base</strong> (<em>type: class</em>) – Inherites the base class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="models.base.UserRole">
+<em class="property">class </em><code class="descclassname">models.base.</code><code class="descname">UserRole</code><a class="headerlink" href="#models.base.UserRole" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-db.db">
+<span id="database-connection"></span><h1>Database connection<a class="headerlink" href="#module-db.db" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="db.db.Connect">
+<em class="property">class </em><code class="descclassname">db.db.</code><code class="descname">Connect</code><a class="headerlink" href="#db.db.Connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>[summary: Connect to database.
+Intitailizing connection: conn = Connect()
+Creating cursor that can execute queries: cur = conn.cursor()
+Executing query: cur.execute(query)
+]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>[description: Returns connection object]</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[type: Connection object]</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="db.db.Connect.cursor">
+<code class="descname">cursor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#db.db.Connect.cursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>[summary: Create a cursor out of the connection that can execute sql queries]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="db.db.Connect.kill">
+<code class="descname">kill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#db.db.Connect.kill" title="Permalink to this definition">¶</a></dt>
+<dd><p>[summary: Kill the connection to the database]</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Slutspurt</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Erik Nord.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

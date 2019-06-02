@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/docs/build/html/index.html">Doc</a> 
+    <h1>Test</h1>
+    <table border = 1>
+        {% for key, value, value2 in result %}
+           <tr>
+              <th> {{ key }} </th>
+              <td><a href="/user/{{key}}"> {{ value }} </a></td>
+              <td> {{ value2 }} </td>
+              <td><a href="/user/{{key}}/delete"> Delete </a></td>
+           </tr>
+        {% endfor %}
+     </table>
+    <form action="http://localhost:5000/user" method="POST">
+        <label for="id">Id</label>
+        <input name="id" type="text">
+        <label for="name">Name</label>
+        <input name="name" type="text">
+        <label for="role">Role</label>
+        <select name="role" multiple>
+            {% for id, role in result2 %}
+            <option value="{{id}}">{{role}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
